@@ -9,14 +9,8 @@ package proyecto_jdb_gui;
  *
  * @author gabri
  */
-public class Proyecto_JDB_GUI {
-
-    /**
-     * @param args the command line arguments
-     */
+public class Proyect_JDB_GUI {
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hola mundo!!");
+        System.out.println("Hola mundillo");
     }
-    
 }
