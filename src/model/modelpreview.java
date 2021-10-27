@@ -9,6 +9,6 @@ package model;
  *
  * @author Leslie J. HL
  */
-public class Entidad1 {
-    
+public class modelpreview {
+
 }
