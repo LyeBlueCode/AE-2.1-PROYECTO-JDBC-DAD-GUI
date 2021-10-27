@@ -18,8 +18,9 @@ public class Proyect_JDB_GUI {
         System.out.println("me caes mal");
     }
     
-  
-    
+    public int ejemplo2()
+        return 0;
+    }
    
     
 }
