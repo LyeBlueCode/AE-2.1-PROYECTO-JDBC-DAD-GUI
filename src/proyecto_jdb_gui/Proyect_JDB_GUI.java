@@ -11,14 +11,12 @@ package proyecto_jdb_gui;
  */
 public class Proyect_JDB_GUI {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public void ejemplo() {
         System.out.println("me caes mal");
     }
     
-    public int ejemplo2()
+    public int ejemplo2() {
         return 0;
     }
    
