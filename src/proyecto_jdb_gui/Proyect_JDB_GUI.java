@@ -15,7 +15,10 @@ public class Proyect_JDB_GUI {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Prrueba 200345678");
+        idiota("idiota");
     }
     
+    public static void idiota(String message){
+        System.out.println(message);
+    }
 }
