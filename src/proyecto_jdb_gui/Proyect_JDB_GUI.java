@@ -17,7 +17,7 @@ public class Proyect_JDB_GUI {
     }
     
     public int ejemplo2() {
-        return 0;
+        return 1;
     }
    
     
