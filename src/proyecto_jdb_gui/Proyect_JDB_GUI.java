@@ -14,11 +14,12 @@ public class Proyect_JDB_GUI {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        idiota("idiota");
+    public void ejemplo() {
+        System.out.println("me caes mal");
     }
     
-    public static void idiota(String message){
-        System.out.println(message);
-    }
+  
+    
+   
+    
 }
