@@ -20,17 +20,31 @@ public class UserLogin {
 
     }
 
-    boolean isLoged(List<String[]> usuarios) {
-        return usuarios.stream().filter(usuario -> (usuario[0] == null
-                ? this.user == null
-                : usuario[0].equals(this.user))).anyMatch(usuario
-                -> (usuario[1] == null
-                        ? this.pass == null
-                        : usuario[1].equals(this.pass)));
+    /**
+     * 
+     * Este método devuelve verdadero o falso si el usuario está logeado.
+     * Verifica que el usuario introducido coincida con algún usuario de la 
+     * base de datos, y si es así verifica sus contraseñas.
+     * 
+     * @param usuarios
+     * @return
+     */
+    public boolean isLoged(List<String[]> usuarios) {
+        for (String[] users : usuarios)
+        {
+            if (users[0].equals(user)) 
+            {
+                if (users[1].equals(pass))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     //Este método va en DatabaseManager
-    List<String[]> getUsers() {
+    public List<String[]> getUsers() {
         List<String[]> usersList = null;
         try
         {
@@ -40,10 +54,10 @@ public class UserLogin {
             ResultSet rs = st.executeQuery("select * from user");
 
             while (rs.next())
-            { //Ejemplo, puesto que aún no se ha creado la tabla user/usuario
-                users[0] = rs.getString("User");
-                users[1] = rs.getString("Password");
-                users[2] = rs.getString("Rol");
+            {
+                users[0] = rs.getString("UsuarioId");
+                users[1] = rs.getString("Contrasenia");
+                users[2] = Integer.toString(rs.getInt("NivelAcceso"));
                 usersList.add(users);
             }
         } catch (SQLException ex)
@@ -52,6 +66,6 @@ public class UserLogin {
         }
         return usersList;
     }
-    //---------------------------------------
 
+    //---------------------------------------
 }
