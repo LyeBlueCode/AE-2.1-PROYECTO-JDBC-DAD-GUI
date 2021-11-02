@@ -32,7 +32,10 @@ public class DatabaseConnection {
             String ConnectionUrl =
             "jdbc:mysql://" + URL + ":" + PORT + "/" + DBNAME;
             conn = DriverManager.getConnection(ConnectionUrl, USER, PASSWORD);
-        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException ex) {
+            
+        } catch (InstantiationException | IllegalAccessException | 
+                 ClassNotFoundException | SQLException ex) {
+            
             ex.printStackTrace();
         }
         return conn;
